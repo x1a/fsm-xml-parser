@@ -1,0 +1,19 @@
+{
+    "name": "x1a/fsm-xml-parser",
+    "description": "Parsing XML using FSM",
+    "type": "library",
+    "require": {
+        "php": ">=7.1.0",
+        "metabor/statemachine": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "lib/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "": "tests/"
+        }
+    }
+}
