@@ -1,5 +1,8 @@
-
+before_script:
+    - apt-get update -y
+    - apt-get install -y phpunit
+    
 test:app:
-  script:
-  - phpunit
+    script:
+        - phpunit
   
