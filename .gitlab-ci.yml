@@ -1,8 +1,9 @@
 before_script:
     - apt-get update -y
-    - apt-get install -y phpunit
+    - apt-get install -y composer phpunit
     
 test:app:
     script:
+        - composer install
         - phpunit
   
