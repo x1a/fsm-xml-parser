@@ -1,0 +1,32 @@
+@startuml
+
+class XMLReader
+class Statemachine
+abstract class Reader {
+    # XMLReader $xml
+    # Parser $parser
+    + void read(string $filepath)
+    # {abstract} void attachEventHandlers()
+}
+class Parser {
+    # Statemachine $fsm
+    + addTransition( ... )
+    + attachHandler( ... )
+}
+class MyReader {
+    # void attachEventHandlers()
+}
+class MyParser
+note right of MyParser: Initialize state machine\ndefinition
+note left of MyReader: Define XML\nevent handlers
+
+XMLReader -* Reader
+Reader *- Parser
+Parser *- Statemachine
+Reader <|-- MyReader
+Parser <|-- MyParser
+
+
+
+
+@enduml
